@@ -1,7 +1,6 @@
 import re
 
 
-
 def ways_to_climb(n, first=0, second=1):
     if n <= 1:
         return first + second
@@ -9,7 +8,7 @@ def ways_to_climb(n, first=0, second=1):
 
 
 def path_finder(lst):
-    n = len(lst)-1
+    n = len(lst) - 1
     path_sum = 0
     i, j = 0, 0
     while i < n or j < n:
@@ -20,13 +19,13 @@ def path_finder(lst):
             go_right = True
         elif j == n:
             go_down = True
-        elif lst[i][j+1] == lst[i+1][j]:
+        elif lst[i][j + 1] == lst[i + 1][j]:
             # go down
             go_down = True
-        elif lst[i][j+1] > lst[i+1][j]:
+        elif lst[i][j + 1] > lst[i + 1][j]:
             # go right
             go_right = True
-        elif lst[i][j+1] < lst[i+1][j]:
+        elif lst[i][j + 1] < lst[i + 1][j]:
             # go down
             go_down = True
 
@@ -42,12 +41,12 @@ def path_finder(lst):
 
 
 def can_see_stage(seats):
-    col = len(seats[0])-1
-    row = len(seats)-1
+    col = len(seats[0]) - 1
+    row = len(seats) - 1
 
     for i in range(col):
         for j in range(row):
-            if seats[j][i] >= seats[j+1][i]:
+            if seats[j][i] >= seats[j + 1][i]:
                 return False
     return True
 
@@ -114,7 +113,7 @@ def binary_search(lst, high, low, x):
         if lst[mid] == x:
             return True
         elif lst[mid] > x:
-            return binary_search(lst, mid-1, low, x)
+            return binary_search(lst, mid - 1, low, x)
         else:
             return binary_search(lst, high, mid + 1, x)
     else:
@@ -137,7 +136,7 @@ def collect(code, n, l=0, r=None, lst=None):
         return lst
 
     lst.append(code[l:r])
-    return collect(code, n, r, r+n, lst)
+    return collect(code, n, r, r + n, lst)
 
 
 def identify(*cube):
@@ -183,7 +182,7 @@ def num_split(num):
         remainder = num % 10
         if is_negetive:
             remainder *= -1
-        split_list.append(remainder*(10**place))
+        split_list.append(remainder * (10**place))
         place += 1
         num //= 10
 
@@ -193,11 +192,11 @@ def num_split(num):
 def max_product(lst):
     lst.sort()
     l = 0
-    r = len(lst)-1
+    r = len(lst) - 1
     max_prod = -10000
-    while l < len(lst)-2:
-        for i in range(l+1, r):
-            max_prod = max(max_prod, lst[l]*lst[i]*lst[r])
+    while l < len(lst) - 2:
+        for i in range(l + 1, r):
+            max_prod = max(max_prod, lst[l] * lst[i] * lst[r])
         l += 1
     return max_prod
 
@@ -208,9 +207,9 @@ def min_product(lst):
     l = 0
     r = len(lst) - 1
     min_prod = 100000
-    while l < len(lst)-2:
-        for i in range(l+1, r):
-            min_prod = min(min_prod, lst[l]*lst[i]*lst[r])
+    while l < len(lst) - 2:
+        for i in range(l + 1, r):
+            min_prod = min(min_prod, lst[l] * lst[i] * lst[r])
         l += 1
     return min_prod
 
@@ -245,7 +244,7 @@ def connell_sequence(start, end, n):
     sequence = []
     num = 1
     # row count
-    for row in range(1, end+1):
+    for row in range(1, end + 1):
         i = 0  # for indexing of each row.
 
         # for checking if the row is even or not
@@ -276,27 +275,27 @@ def connell_sequence(start, end, n):
         return sequence.index(n)
     else:
         return "Not Found!"
-  
-  
-#  Function to print permutations of string 
-# This function takes three parameters: 
-# 1. String 
-# 2. Starting index of the string 
-# 3. Ending index of the string. 
-def permute(a, l, r): 
-    if l==r: 
-        print (''.join(a))
-    else: 
-        for i in range(l,r): 
-            a[l], a[i] = a[i], a[l] 
-            permute(a, l+1, r)
-            # var = None 
-            a[l], a[i] = a[i], a[l] # backtrack 
-  
-# Driver program to test the above function 
+
+
+#  Function to print permutations of string
+# This function takes three parameters:
+# 1. String
+# 2. Starting index of the string
+# 3. Ending index of the string.
+def permute(a, l, r):
+    if l == r:
+        print(''.join(a))
+    else:
+        for i in range(l, r):
+            a[l], a[i] = a[i], a[l]
+            permute(a, l + 1, r)
+            # var = None
+            a[l], a[i] = a[i], a[l]  # backtrack
+
+# Driver program to test the above function
 # string = "ABC"
-# n = len(string) 
-# a = list(string) 
+# n = len(string)
+# a = list(string)
 # permute(a, 0, n)
 
 # def factorial(n):
@@ -315,10 +314,9 @@ def permute(a, l, r):
 #             a[l], a[i] = a[i], a[l]
 #             permute(a, l + 1, r, output=output)
 #             # a[l], a[i] = a[i], a[l]
-    
-    
-#     return output
 
+
+#     return output
 
 
 # string = 'ab'
@@ -335,20 +333,20 @@ def advanced_sort(lst):
     lst.sort()
     left = 0
     ans = []
-    while left < len(lst)-1:
+    while left < len(lst) - 1:
 
         right = left + 1
 
-        while lst[right] == lst[right-1] and right < len(lst)-1:
+        while lst[right] == lst[right - 1] and right < len(lst) - 1:
             right += 1
 
-        if right == len(lst)-1 and lst[right] == lst[right-1]:
+        if right == len(lst) - 1 and lst[right] == lst[right - 1]:
             # if the last element is equal to second last then
             # append all the remaining elements
             ans.append(lst[left:])
             break
 
-        if right == len(lst)-1 and lst[right] != lst[right-1]:
+        if right == len(lst) - 1 and lst[right] != lst[right - 1]:
             # if the last element is not equal to second last then
             # first append the lst[left->right] and the last remaining element
             ans.append(lst[left:right])
@@ -357,12 +355,10 @@ def advanced_sort(lst):
 
         ans.append(lst[left:right])
 
-
-
         left = right
-        
 
     return ans
+
 
 def guess_score(code, guess):
     black = 0
@@ -373,7 +369,8 @@ def guess_score(code, guess):
         elif char in guess:
             white += 1
 
-    return {"black":black,"white":white}
+    return {"black": black, "white": white}
+
 
 print(guess_score("1423", "5678"), {"black": 0, "white": 0})
 print(guess_score("1423", "2222"), {"black": 1, "white": 0})

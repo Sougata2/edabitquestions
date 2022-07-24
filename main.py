@@ -17,7 +17,7 @@ if __name__ == '__main__':
     for i in range(100):
         print(ways_to_climb(i))
 
-    print("*"*40)
+    print("*" * 40)
 
     lst = [
         [1, 0, 3],
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     print(path_finder(lst))
     print(path_finder(lst1))
 
-    print('*'*40)
+    print('*' * 40)
 
     print(can_see_stage([
         [1, 2, 3],
@@ -65,7 +65,7 @@ if __name__ == '__main__':
                          [5, 5, 5, 10, 4, 4],
                          [6, 6, 7, 6, 5, 5]]))
 
-    print('*'*40)
+    print('*' * 40)
 
     print(find_pattern({
         "Phrase1": "COVID-19 is no good",
@@ -93,7 +93,7 @@ if __name__ == '__main__':
 
     }, 'Made'))
 
-    print('*'*40)
+    print('*' * 40)
 
     print(freed_prisoners([1, 1, 0, 0, 0, 1, 0]))
     print(freed_prisoners([1, 1, 1]))
@@ -103,7 +103,7 @@ if __name__ == '__main__':
     print(freed_prisoners([1, 1, 1, 0, 0, 0]))
     print(freed_prisoners([1, 0, 0, 0, 0, 0, 0]))
 
-    print("*"*40)
+    print("*" * 40)
 
     print(advanced_sort([2, 1, 2, 1]))
     print(advanced_sort([5, 4, 5, 5, 4, 3]))
@@ -115,14 +115,14 @@ if __name__ == '__main__':
     print(advanced_sort([1234, 1235, 1234, 1235, 1236, 1235]))
     print(advanced_sort(['1234', '1235', '1234', '1235', '1236', '1235']))
 
-    print("*"*40)
+    print("*" * 40)
 
     dakti("i2s th1s a3 t4est    ")
     dakti("yo2u cr3azy a1re ?  ")
     dakti("en5tere y2a bab1y y3o 4me s6e not7a cuand8o 9me-ves")
     dakti('h4as don2de ah1i n3o ll5egado q7ue 8yo te9-llevare s6abes')
 
-    print('*'*40)
+    print('*' * 40)
 
     str_vector = [
         "intercontinentalisationalism", "strengths", "pneumonoultramicroscopicsilicovolcanoconiosis",
@@ -138,12 +138,12 @@ if __name__ == '__main__':
     for s, n in test_cases:
         print(collect(s, n))
 
-    print('*'*40)
+    print('*' * 40)
 
     print(identify(
-    ["O", "O", "O"],
-    ["O", "O", "O"],
-    ["O", "O", "O"]
+        ["O", "O", "O"],
+        ["O", "O", "O"],
+        ["O", "O", "O"]
     ))
     print(identify(
         ["O", "O"],
@@ -176,7 +176,7 @@ if __name__ == '__main__':
         ["O"]
     ))
 
-    print("*"*40)
+    print("*" * 40)
 
     print(num_split(39))
     print(num_split(100))
@@ -186,7 +186,7 @@ if __name__ == '__main__':
     print(num_split(900))
     print(num_split(-100))
 
-    print("*"*40)
+    print("*" * 40)
 
     print(max_product([1, -1, 1]), -1)
     print(max_product([1, -1, 1, 1]), 1)
@@ -202,7 +202,7 @@ if __name__ == '__main__':
     print(max_product([-5, -3, -1, 0, 4]), 60)
     print(max_product([5, 3, -1, 0, -4, 7, 7, 9]), 441)
 
-    print("*"*40)
+    print("*" * 40)
 
     print(min_product([1, -1, 1]), -1)
     print(min_product([1, -1, 1, 1]), -1)
@@ -218,48 +218,48 @@ if __name__ == '__main__':
     print(min_product([-5, -3, -1, 0, 4]), -15)
     print(min_product([5, 3, -1, 0, -4, 7, 7, 9]), -252)
 
-    print("*"*40)
+    print("*" * 40)
 
     print(find_and_remove({
-    "workshop": {
-      "bedsheets": "2000",
-      "working": "v0g89t7t",
-      "pen": "370",
-      "movies": "wo1a3d5d",
+        "workshop": {
+            "bedsheets": "2000",
+            "working": "v0g89t7t",
+            "pen": "370",
+            "movies": "wo1a3d5d",
+        },
+    }))
+
+print(find_and_remove({
+    "bedroom": {
+      "slippers": "10000",
+      "piano": "5500",
+      "call": "vet",
+      "travel": "world",
+      },
+}))
+
+print(find_and_remove({
+    'bedroom': {
+      'slippers': "10000",
+      'piano': "5500",
+      'call': "vet",
+      'travel': "world",
+      },
+}))
+
+print(find_and_remove({
+    'kitchen': {
+      "gold spoons": "900",
+      'piano': "550",
+      'notes': "ga0r76ba22g4e",
+      },
+    'cellar': {
+        'reminder': "dog",
+        'bottle': "750",
     },
 }))
 
-print(find_and_remove({
-  "bedroom": {
-    "slippers": "10000",
-    "piano": "5500",
-    "call": "vet",
-    "travel": "world",
-  },
-}))
-
-print(find_and_remove({
-  'bedroom': {
-    'slippers': "10000",
-    'piano': "5500",
-    'call': "vet",
-    'travel': "world",
-  },
-}))
-
-print(find_and_remove({
-  'kitchen': {
-    "gold spoons": "900",
-    'piano': "550",
-    'notes': "ga0r76ba22g4e",
-  },
-  'cellar': {
-    'reminder': "dog",
-    'bottle': "750",
-  },
-}))
-
-print("*"*40)
+print("*" * 40)
 
 print(connell_sequence(1, 3, 4), 2, "Example #1")
 print(connell_sequence(2, 3, 4), 1, "Example #2")
@@ -275,13 +275,15 @@ print(connell_sequence(1, 1000, 8000), 4044)
 print(connell_sequence(111, 1000, 8000), "Not Found")
 # print(connell_sequence(10000, 11000, 120999810), 10510404) takes 7-8 seconds
 
-print("*"*40)
+print("*" * 40)
 
-print(advanced_sort([1,2,1,2]) , [[1,1],[2,2]])
-print(advanced_sort([2,1,2,1]) , [[2,2],[1,1]])
-print(advanced_sort([3,2,1,3,2,1]) , [[3,3],[2,2],[1,1]])
-print(advanced_sort([5,5,4,3,4,4]) , [[5,5],[4,4,4],[3]])
-print(advanced_sort([80,80,4,60,60,3]),[[80,80],[4],[60,60],[3]])
-print(advanced_sort(['c','c','b','c','b']),[['c','c','c'],['b','b']])
-print(advanced_sort([1234, 1235, 1234, 1235, 1236, 1235]),[[1234, 1234],[1235, 1235, 1235],[1236]])
-print(advanced_sort(['1234', '1235', '1234', '1235', '1236', '1235']),[['1234', '1234'],['1235', '1235', '1235'],['1236']])
+print(advanced_sort([1, 2, 1, 2]), [[1, 1], [2, 2]])
+print(advanced_sort([2, 1, 2, 1]), [[2, 2], [1, 1]])
+print(advanced_sort([3, 2, 1, 3, 2, 1]), [[3, 3], [2, 2], [1, 1]])
+print(advanced_sort([5, 5, 4, 3, 4, 4]), [[5, 5], [4, 4, 4], [3]])
+print(advanced_sort([80, 80, 4, 60, 60, 3]), [[80, 80], [4], [60, 60], [3]])
+print(advanced_sort(['c', 'c', 'b', 'c', 'b']), [['c', 'c', 'c'], ['b', 'b']])
+print(advanced_sort([1234, 1235, 1234, 1235, 1236, 1235]),
+      [[1234, 1234], [1235, 1235, 1235], [1236]])
+print(advanced_sort(['1234', '1235', '1234', '1235', '1236', '1235']), [
+      ['1234', '1234'], ['1235', '1235', '1235'], ['1236']])
