@@ -125,13 +125,19 @@ if __name__ == '__main__':
     print('*' * 40)
 
     str_vector = [
-        "intercontinentalisationalism", "strengths", "pneumonoultramicroscopicsilicovolcanoconiosis",
-        "lexicographically", "anesthesiologists", "subdermatoglyphic", "sesquipedalianism",
-        "recollection", "pseudopseudohypoparathyroidism", "floccinaucinihilipilification",
-        "antidisestablishmentarianism", "supercalifragilisticexpialidocious", "incomprehensibilities",
-        "astrophysicists", "honorificabilitudinitatibus", "unimaginatively", "euouae", "tsktsk",
+        "intercontinentalisationalism", "strengths",
+        "pneumonoultramicroscopicsilicovolcanoconiosis",
+        "lexicographically", "anesthesiologists", "subdermatoglyphic",
+        "sesquipedalianism",
+        "recollection", "pseudopseudohypoparathyroidism",
+        "floccinaucinihilipilification",
+        "antidisestablishmentarianism", "supercalifragilisticexpialidocious",
+        "incomprehensibilities",
+        "astrophysicists", "honorificabilitudinitatibus", "unimaginatively",
+        "euouae", "tsktsk",
         "uncopyrightable"
-    ]
+        ]
+
     num_vector = [6, 3, 15, 4, 6, 6, 6, 3, 7, 2, 5, 3, 9, 4, 12, 8, 7, 6, 11]
     test_cases = list(zip(str_vector, num_vector))
 
