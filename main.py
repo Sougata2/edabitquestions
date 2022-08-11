@@ -13,6 +13,7 @@ from function import min_product
 from function import find_and_remove
 from function import connell_sequence
 from function import guess_score
+from function import climb
 
 if __name__ == '__main__':
     for i in range(100):
@@ -294,6 +295,8 @@ print(advanced_sort([1234, 1235, 1234, 1235, 1236, 1235]),
       [[1234, 1234], [1235, 1235, 1235], [1236]])
 print(advanced_sort(['1234', '1235', '1234', '1235', '1236', '1235']), [
       ['1234', '1234'], ['1235', '1235', '1235'], ['1236']])
+
+print("*"*40)
 
 print(guess_score("1423", "5678"), {"black": 0, "white": 0})
 print(guess_score("1423", "2222"), {"black": 1, "white": 0})
