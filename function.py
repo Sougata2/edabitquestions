@@ -1,4 +1,5 @@
 import re
+import math
 
 
 def ways_to_climb(n, first=0, second=1):
@@ -77,19 +78,19 @@ def freed_prisoners(prison):
     return freed
 
 
-def advanced_sort(lst: list):
-    dct = {}
-    for i in lst:
-        dct[i] = dct.get(i, 0) + 1
-
-    output = []
-    for num in dct.items():
-        temp = []
-        for i in range(dct[num]):
-            temp.append(num)
-        output.append(temp)
-
-    return output
+# def advanced_sort(lst: list):
+#     dct = {}
+#     for i in lst:
+#         dct[i] = dct.get(i, 0) + 1
+#
+#     output = []
+#     for num in dct.items():
+#         temp = []
+#         for i in range(dct[num]):
+#             temp.append(num)
+#         output.append(temp)
+#
+#     return output
 
 
 def dakti(sentence: str):
@@ -372,9 +373,55 @@ def guess_score(code, guess):
     return {"black": black, "white": white}
 
 
-print(guess_score("1423", "5678"), {"black": 0, "white": 0})
-print(guess_score("1423", "2222"), {"black": 1, "white": 0})
-print(guess_score("1423", "1234"), {"black": 1, "white": 3})
-print(guess_score("1423", "2211"), {"black": 0, "white": 2})
-print(guess_score("2928", "7722"), {"black": 1, "white": 1})
-print(guess_score("4845", "6446"), {"black": 1, "white": 1})
+def climb(stamina, obstacle):
+    obstacle_passed = 0
+    for i in range(len(obstacle)-1):
+        # print(f"{obstacle[i]} --> {obstacle[i+1]}")
+        # print(f"stamina: {stamina}")
+        dif = obstacle[i+1] - obstacle[i]
+        # print(f"diff : {dif}")
+        without_dec = math.floor(abs(dif))
+        # print(f"without decimal : {without_dec}")
+        stamina -= 2*without_dec if dif > 0 else 1*without_dec
+        # print(f"stamina after reducing the without decimal value : "
+        #       f"{stamina}")
+
+        decimal_val = abs(dif) - without_dec
+        # print(f"decimal value ; {decimal_val}")
+        if decimal_val > 0:
+            stamina -= 1
+
+        # print(f'final stamina : {stamina}')
+        if stamina > 2:
+            obstacle_passed += 1
+        else:
+            break
+
+        # print(f"Obstacle count : {obstacle_passed}")
+        # print("="*40)
+
+    return obstacle_passed
+
+
+print(climb(5, [0, 1, 2.5, 0.8]), 1)
+print("/"*40)
+print(climb(10, [0, 1, 2.5, 0.8]), 3)
+print("/"*40)
+print(climb(10, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 4)
+print("/"*40)
+print(climb(11, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 5)
+print("/"*40)
+print(climb(12, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 5)
+print("/"*40)
+print(climb(13, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 5)
+print("/"*40)
+print(climb(14, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 5)
+print("/"*40)
+print(climb(15, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 5)
+print(climb(16, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 5)
+print(climb(17, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 6)
+print(climb(18, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 6)
+print(climb(19, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 7)
+print(climb(20, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 7)
+print(climb(30, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 8)
+print(climb(15, [0.3, 2, 2.8, 3, 3, 0.8, 3.2, 2, 0]), 5)
