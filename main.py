@@ -13,7 +13,7 @@ from function import min_product
 from function import find_and_remove
 from function import connell_sequence
 from function import guess_score
-from function import climb
+# from function import climb
 
 if __name__ == '__main__':
     for i in range(100):
