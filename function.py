@@ -1,5 +1,7 @@
+from audioop import mul
 import re
 import math
+from turtle import right
 
 
 def ways_to_climb(n, first=0, second=1):
