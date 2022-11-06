@@ -13,7 +13,8 @@ from function import min_product
 from function import find_and_remove
 from function import connell_sequence
 from function import guess_score
-# from function import climb
+from function import champions
+
 
 if __name__ == '__main__':
     for i in range(100):
@@ -113,7 +114,7 @@ if __name__ == '__main__':
     print(advanced_sort([3, 2, 1, 3, 2, 1]))
     print(advanced_sort([5, 5, 4, 3, 4, 4]))
     print(advanced_sort([80, 80, 4, 60, 60, 3]))
-    print(advanced_sort(['c', 'c', 'b', 'c', 'b', 1, 1]))
+    # print(advanced_sort(['c', 'c', 'b', 'c', 'b', 1, 1]))
     print(advanced_sort([1234, 1235, 1234, 1235, 1236, 1235]))
     print(advanced_sort(['1234', '1235', '1234', '1235', '1236', '1235']))
 
@@ -138,7 +139,7 @@ if __name__ == '__main__':
         "astrophysicists", "honorificabilitudinitatibus", "unimaginatively",
         "euouae", "tsktsk",
         "uncopyrightable"
-        ]
+    ]
 
     num_vector = [6, 3, 15, 4, 6, 6, 6, 3, 7, 2, 5, 3, 9, 4, 12, 8, 7, 6, 11]
     test_cases = list(zip(str_vector, num_vector))
@@ -304,3 +305,175 @@ print(guess_score("1423", "1234"), {"black": 1, "white": 3})
 print(guess_score("1423", "2211"), {"black": 0, "white": 2})
 print(guess_score("2928", "7722"), {"black": 1, "white": 1})
 print(guess_score("4845", "6446"), {"black": 1, "white": 1})
+
+print("*"*40)
+
+print(
+    champions([
+        {
+              "name": "Manchester United",
+              "wins": 30,
+              "loss": 3,
+              "draws": 5,
+              "scored": 88,
+              "conceded": 20,
+              },
+        {
+            "name": "Arsenal",
+            "wins": 24,
+            "loss": 6,
+            "draws": 8,
+            "scored": 98,
+            "conceded": 29,
+        },
+        {
+            "name": "Chelsea",
+            "wins": 22,
+            "loss": 8,
+            "draws": 8,
+            "scored": 98,
+            "conceded": 29,
+        },
+    ]), "Manchester United"
+)
+print(
+    champions([
+        {
+            "name": "Manchester City",
+            "wins": 30,
+            "loss": 8,
+            "draws": 0,
+            "scored": 67,
+            "conceded": 20,
+        },
+        {
+            "name": "Liverpool",
+            "wins": 34,
+            "loss": 2,
+            "draws": 2,
+            "scored": 118,
+            "conceded": 29,
+        },
+        {
+            "name": "Leicester City",
+            "wins": 22,
+            "loss": 8,
+            "draws": 8,
+            "scored": 98,
+            "conceded": 29,
+        },
+    ]), "Liverpool"
+)
+
+print(
+    champions([
+        {
+            "name": "Manchester City",
+            "wins": 30,
+            "loss": 8,
+            "draws": 0,
+            "scored": 67,
+            "conceded": 20,
+        },
+        {
+            "name": "New Castle United",
+            "wins": 34,
+            "loss": 2,
+            "draws": 2,
+            "scored": 118,
+            "conceded": 36,
+        },
+        {
+            "name": "Leicester City",
+            "wins": 34,
+            "loss": 2,
+            "draws": 2,
+            "scored": 108,
+            "conceded": 21,
+        },
+    ]), "Leicester City"
+)
+print(
+    champions([
+        {
+            "name": "Manchester City",
+            "wins": 30,
+            "loss": 6,
+            "draws": 2,
+            "scored": 102,
+            "conceded": 20,
+        },
+        {
+            "name": "Liverpool",
+            "wins": 24,
+            "loss": 6,
+            "draws": 8,
+            "scored": 118,
+            "conceded": 29,
+        },
+        {
+            "name": "Arsenal",
+            "wins": 28,
+            "loss": 2,
+            "draws": 8,
+            "scored": 87,
+            "conceded": 39,
+        },
+    ]), "Manchester City"
+)
+print(
+    champions([
+        {
+            "name": "Manchester City",
+            "wins": 30,
+            "loss": 6,
+            "draws": 2,
+            "scored": 102,
+            "conceded": 20,
+        },
+        {
+            "name": "Liverpool",
+            "wins": 24,
+            "loss": 6,
+            "draws": 8,
+            "scored": 118,
+            "conceded": 29,
+        },
+        {
+            "name": "Arsenal",
+            "wins": 30,
+            "loss": 0,
+            "draws": 8,
+            "scored": 87,
+            "conceded": 39,
+        },
+    ]), "Arsenal"
+)
+print(
+    champions([
+        {
+            "name": "Chelsea",
+            "wins": 35,
+            "loss": 3,
+            "draws": 0,
+            "scored": 102,
+            "conceded": 20,
+        },
+        {
+            "name": "Liverpool",
+            "wins": 24,
+            "loss": 6,
+            "draws": 8,
+            "scored": 118,
+            "conceded": 29,
+        },
+        {
+            "name": "Arsenal",
+            "wins": 28,
+            "loss": 2,
+            "draws": 8,
+            "scored": 87,
+            "conceded": 39,
+        },
+    ]), "Chelsea"
+)

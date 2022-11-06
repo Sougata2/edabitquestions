@@ -2,7 +2,6 @@ import re
 import math
 
 
-
 def ways_to_climb(n, first=0, second=1):
     if n <= 1:
         return first + second
@@ -402,3 +401,19 @@ def climb(stamina, obstacle):
         # print("="*40)
 
     return obstacle_passed
+
+
+def champions(teams):
+    top_team = teams[0]
+    teams.pop(0)
+    for team in teams:
+        total_points = 3*team["wins"] + 1*team["draws"]
+        goal_difference = team["scored"] - team["conceded"]
+        top_team_total_points = 3*top_team["wins"] + top_team["draws"]
+        top_team_goal_difference = top_team["scored"] - top_team["conceded"]
+        if total_points > top_team_total_points:
+            top_team = team
+        elif total_points == top_team_total_points:
+            top_team = top_team if top_team_goal_difference > goal_difference else team
+    return top_team
+
